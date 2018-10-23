@@ -158,8 +158,9 @@ function updateMoves() {
 */
 function updateStar() {
 	if (moves % movesForStar == 0) {
-		stars--;
-		if (stars >= 0) {
+		const auxStar = stars - 1;
+		if (auxStar > 0) {
+			stars--;
 			const remainingStars = document.querySelectorAll('.stars .fa-star');
 			remainingStars[remainingStars.length - 1].className = 'fa fa-star-o';
 		}
