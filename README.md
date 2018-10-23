@@ -12,6 +12,6 @@ Each turn:
 * If the cards do not match, both cards are flipped face down.
 * The game ends once all cards have been correctly matched.
 
-## Installation
+## Getting Started
 
 Well, this project contains all for running, well... except the browser, that up to you. So download the project and open `index.html` in a browser and start to play!!
