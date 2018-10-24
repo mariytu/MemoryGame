@@ -17,3 +17,11 @@ Each turn:
 ## Getting Started
 
 Well, this project contains all for running, well... except the browser, that up to you. So download the project and open `index.html` in a browser and start to play!!
+
+## Dependencies
+
+There are some awesome plugins that I used in this project that are listed below:
+
+* **sweetalert**: sweetalert.js and sweetalert.css [https://sweetalert.js.org/guides/]
+* **easytimer**: easytimer.js [https://albert-gonzalez.github.io/easytimer.js/]
+* **animate**: just the portion of animation used in this project from animate.css [https://daneden.github.io/animate.css/]
