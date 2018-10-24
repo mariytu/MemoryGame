@@ -6,11 +6,15 @@ let moves = 0;
 let stars = 3;
 let remainingCards = 16;
 let openCard = '';
-let startTime = 0;
+const myTimer = new Timer();
 
 let cardsElements = ['fa-diamond', 'fa-paper-plane-o', 'fa-anchor', 'fa-bolt', 'fa-cube', 'fa-leaf', 'fa-bicycle', 'fa-bomb'];
 cardsElements = [...cardsElements, ...cardsElements];
 const cardContainer = document.querySelector('.deck');
+
+myTimer.addEventListener('secondsUpdated', function (e) {
+	document.querySelector('#timer').innerHTML = myTimer.getTimeValues().toString();
+});
 
 init();
 
@@ -113,8 +117,8 @@ function clickCard(evt) {
 */
 function launchModal() {
 	
-	const endTime = performance.now();
-	const time = millisToMinutesAndSeconds(endTime - startTime);
+	const time = myTimer.getTimeValues().toString();
+	myTimer.stop();
 	
 	const textMessage = `With ${moves} moves and ${stars} stars in ${time}.
 						Woooo!!`;
@@ -176,7 +180,9 @@ function init() {
 	stars = 3;
 	remainingCards = 16;
 	openCard = '';
-	startTime = performance.now();
+	myTimer.reset();
+	document.querySelector('#timer').innerHTML = myTimer.getTimeValues().toString();
+	myTimer.start();
 	
 	initElements();
 	cardsElements = shuffle(cardsElements);

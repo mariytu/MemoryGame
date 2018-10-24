@@ -93,12 +93,12 @@ h1 {
 
 .score-panel {
     text-align: left;
-    width: 345px;
+    width: 400px;
     margin-bottom: 10px;
+	display: inherit;
 }
 
 .score-panel .stars {
-    margin: 0;
     padding: 0;
     display: inline-block;
     margin: 0 5px 0 0;
@@ -110,6 +110,39 @@ h1 {
 }
 
 .score-panel .restart {
-    float: right;
+    padding: 0 80px;
     cursor: pointer;
+}
+
+.score-panel p {
+	margin: 0;
+}
+
+.score-panel .stars,
+.score-panel .moves,
+.score-panel p,
+.score-panel .restart {
+	position: relative;
+    bottom: -15px;
+}
+
+/*
+ * WIDGET
+ */
+
+.widget {
+  border-radius: 5px;
+  padding: 5px 10px;
+  width: fit-content;
+  margin: auto;
+}
+
+.widget h2 {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.navy-bg, .bg-primary {
+    background-color: #1ab394;
+    color: #ffffff;
 }
